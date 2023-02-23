@@ -14,7 +14,7 @@
 <body>
     <div class="login-form">
         <?php
-        if ($_GET['login_err']) {
+        if (isset($_GET['login_err'])) {
             $err = htmlspecialchars($_GET['login_err']);
             switch ($err) {
                 case 'password':
