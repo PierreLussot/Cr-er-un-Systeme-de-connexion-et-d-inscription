@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
 
 <body>
     <h1>Bonjour ! <?= $_SESSION['user'] ?></h1>
-    <a href="deconnextion.php" class="btn btn-danger btn-lg">Deconnexion</a>
+    <a href="deconnexion.php" class="btn btn-danger btn-lg">Deconnexion</a>
 </body>
 
 </html>

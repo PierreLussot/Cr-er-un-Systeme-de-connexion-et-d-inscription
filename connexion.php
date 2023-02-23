@@ -10,7 +10,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     //Protection contre des éventuelle injection sql sur l'input email
     $password = htmlspecialchars($_POST['password']);
     //On vérifie si la personne est déjà inscrite dans notre BDD
-    $check = $bdd->prepare("SELECT pseudo, email,password FROM utilisateursc WHERE email= ?");
+    $check = $bdd->prepare("SELECT pseudo, email,password FROM utilisateurs WHERE email= ?");
     //Puis ont, mais cela dans un tableau et on renseigne notre email.
     $check->execute([$email]);
     //On stocke les données dans data on va rechercher avec fetch
