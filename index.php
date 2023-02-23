@@ -12,8 +12,36 @@
 </head>
 
 <body>
-
     <div class="login-form">
+        <?php
+        if ($_GET['login_err']) {
+            $err = htmlspecialchars($_GET['login_err']);
+            switch ($err) {
+                case 'password':
+        ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> mot de passe
+                    </div>
+                <?php
+                    break;
+                case 'email':
+                ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> email
+                    </div>
+                <?php
+                    break;
+                case 'already':
+                ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> compte non existant
+                    </div>
+        <?php
+                    break;
+            }
+        }
+
+        ?>
         <form action="connexion.php" method="post">
             <h2 class="text-center">Connexion</h2>
             <div class="form-group">
