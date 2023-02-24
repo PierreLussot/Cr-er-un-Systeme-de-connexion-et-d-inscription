@@ -38,6 +38,7 @@ if (!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwo
                             'ip' => $ip
                         ));
                         header("Location: inscription.php?reg_err=success");
+
                     } else {
                         header("Location: inscription.php?reg_err=password");
                     }

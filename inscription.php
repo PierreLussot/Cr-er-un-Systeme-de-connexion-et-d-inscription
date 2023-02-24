@@ -84,6 +84,7 @@
                 <button type="submit" class="btn btn-primary btn-block">Inscription</button>
             </div>
         </form>
+        <p class="text-center"><a href="connexion.php">Connexion</a></p>
     </div>
 
 </body>
